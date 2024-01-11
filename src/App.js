@@ -1,24 +1,19 @@
-import logo from './logo.svg';
-import './App.css';
+import 'tailwindcss/tailwind.css';
+import Home from './pages/Home';
+import Search from './pages/Search';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+    <>
+      <header className='fixed top-0 w-full bg-white shadow'>
+        <div className='flex justify-between items-center py-[8px] px-[16px]'>
+          <Search />
+        </div>
       </header>
-    </div>
+      <section className='py-[8px] px-[16px] mt-[60px]'>
+        <Home />
+      </section>
+    </>
   );
 }
 
